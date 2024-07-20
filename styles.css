@@ -1,0 +1,63 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 68px; /* Increased font size */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 80%; /* Adjusted to allow space for the heading */
+}
+
+.option {
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+    margin: 10px; /* Add some margin between the images */
+    overflow: hidden; /* Ensures the animation is clipped */
+}
+
+.option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #ccc; /* Add a border to the images */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.option:hover img {
+    transform: scale(1.05); /* Scale up the image slightly on hover */
+}
+
+.option h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 60px; /* Increased font size */
+    font-weight: bold; /* Optional: Add bold font weight */
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 0.3s ease; /* Fade-in transition effect */
+}
+
+.option:hover h2 {
+    opacity: 1; /* Show the text on hover */
+}

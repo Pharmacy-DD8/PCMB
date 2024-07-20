@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCMB Technician Online Manual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Choose a Side</h1>
+    <div class="container">
+        <div class="option" id="HazOption" title="Haz">
+            <img src="haz.jpg" alt="Haz">
+            <h2>Haz</h2>
+        </div>
+        <div class="option" id="Non-HazOption" title="Non-Haz">
+            <img src="non-haz.jpg" alt="Non-Haz">
+            <h2>Non-Haz</h2>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('HazOption').addEventListener('click', function() {
+            window.location.href = 'Haz.html'; // Redirect to the Haz section
+        });
+
+        document.getElementById('Non-HazOption').addEventListener('click', function() {
+            window.location.href = 'Non-Haz.html'; // Redirect to the Non-Haz section
+        });
+    </script>
+</body>
+</html>
