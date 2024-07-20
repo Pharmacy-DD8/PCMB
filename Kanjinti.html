@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 68%;
+        margin: 60px auto 0;
+        background-color: white;
+        border-radius: 10px;
+        padding: 30px 15px 15px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+    .recipe-image {
+        width: 20%;
+        border-radius: 20%;
+    }
+    .recipe-title {
+        text-align: center;
+        font-size: 2em;
+        margin: 20px 0;
+    }
+    .recipe-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .info-item {
+        margin: 0 20px;
+    }
+    .total-time {
+        text-align: left;
+    }
+    .yield {
+        text-align: right;
+    }
+    .tab {
+        cursor: pointer;
+        padding: 10px;
+        margin: 0 5px;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+    .tab.active {
+        border-color: #007BFF;
+    }
+    .tab-content {
+        display: none;
+        transition: opacity 0.3s ease;
+        color: black;
+    }
+    .tab-content.active {
+        display: block;
+        opacity: 1;
+    }
+    .ingredients-list, .directions-list {
+        list-style-type: none;
+        padding: 0;
+        color: black;
+    }
+    .ingredients-list li, .directions-list li {
+        margin: 10px 0;
+    }
+    .ingredients-list li input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    .star-rating {
+        color: gold;
+        margin-bottom: 20px;
+    }
+    .print-pin-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .print-pin-buttons a, .print-pin-buttons button {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 0 5px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .print-pin-buttons a:hover, .print-pin-buttons button:hover {
+        background-color: #0056b3;
+    }
+    .three-column-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+    .column {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        text-align: center; /* Center content within the column */
+    }
+    .column h2 {
+        color: black;
+    }
+    .directions {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the directions content */
+        text-align: center; /* Center text within the directions column */
+    }
+    .calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .calculator input, .calculator button {
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .calculator input {
+        width: 100px;
+        text-align: right;
+    }
+    .calculator button {
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+    }
+    .calculator button:hover {
+        background-color: #0056b3;
+    }
+    @media (max-width: 768px) {
+        .recipe-image {
+            width: 80%;
+        }
+        .recipe-info {
+            flex-direction: column;
+            align-items: center;
+        }
+        .print-pin-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+        .print-pin-buttons a, .print-pin-buttons button {
+            margin: 5px 0;
+        }
+        .three-column-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+    #directions {
+        display: block !important;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="recipe-image" src="Kanjinti.gif" alt="Kanjinti">
+        <h1 class="recipe-title">Kanjinti</h1>
+        <div class="star-rating">★★★</div>
+        <div class="recipe-info">
+            <div class="info-item total-time">Total Time: 7 minutes</div>
+            <div class="info-item yield">Yields: 20mL</div>
+        </div>          
+        <div class="print-pin-buttons">
+            <a href="Construction.html" class="button-link">Print Recipe</a>
+            <a href="Non-Haz.html" class="button-link">Non-Haz Recipes</a>
+        </div>
+        <div class="three-column-layout">
+            <div class="column ingredients">
+                <h2>Ingredients</h2>
+                <div id="ingredients" class="tab-content active">
+                    <ul class="ingredients-list">
+                        <li><input type="checkbox">Kanjinti Vial</li>
+                        <li><input type="checkbox">Bacterialstatic Water</li>
+                        <!-- Add more ingredients as needed -->
+                    </ul>
+                </div>
+            </div>
+            <div class="column directions">
+                <h2>Directions</h2>
+                <div id="directions" class="tab-content">
+                    <ol class="directions-list">
+                        <li>Attach Aux Labels.</li>
+                        <li>Reconstitute Kanjinti Vial.</li>
+                        <li>Draw up the desired dose.</li>
+                        <li>Take Pictures.</li>
+                        <li>Inject into base bag.</li>
+                        <!-- Add more steps as needed -->
+                    </ol>
+                </div>
+            </div>
+            <div class="column calculator">
+                <h2>Calculator</h2>
+                <input type="number" id="number" placeholder="Enter number">
+                <button onclick="calculate()">Calculate</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculate() {
+            // Get value from input field
+            let number = parseFloat(document.getElementById('number').value);
+            // Convert to absolute value and check if it is greater than 0
+            number = Math.abs(number);
+            if (number <= 0) {
+                document.getElementById('result').innerText = 'Please enter a number greater than 0';
+                return;
+            }
+            // Perform calculation
+            let result = (number / 21).toFixed(3); // Divide by 21 and round to 3 decimal places
+            // Display the result
+            document.getElementById('result').innerText = 'Withdraw: ' + result + ' mL';
+        }
+    </script>
+</body>
+</html>
