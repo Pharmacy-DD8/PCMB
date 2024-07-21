@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link rel="stylesheet" href="kanjinti_styles.css">
+</head>
+<body>
+    <div class="recipe-container">
+        <div class="recipe-header">
+            <img src="Kanjinti.png" alt="Recipe Image" class="recipe-image">
+            <h1>Kanjinti</h1>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <!-- <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span> -->
+                <!-- <span class="reviews">5 from 21 reviews</span> -->
+            </div>
+            <div class="recipe-meta">
+                <span>🕒 Time: 7 minutes</span>
+                <span>💉 Yield: 20mL</span>
+            </div>
+        </div>
+        <div class="recipe-buttons">
+            <button onclick="printRecipe()">
+                <img src="print.svg" alt="Print"> Print Recipe
+            </button>
+            <button onclick="window.location.href='non-haz.html'">
+                <img src="Paomedia-Small-N-Flat-House.512.png" alt="Pin"> Non-Haz Home
+            </button>
+        </div>
+        <!-- <div class="recipe-description">
+            <p>JUICY LUCY! A delicious hamburger stuffed with molten, bubbly, waterfalling cheese, all piled on a buttery toasted bun with all the fixings. The BEST.</p>
+        </div> -->
+        <div class="recipe-content">
+            <div class="recipe-ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Kanjinti</li>
+                    <li>Bacteriostatic Water</li>
+                    <li>Base Bag</li>
+                    <!-- <li>6 brioche buns</li>
+                    <li>Toppings: Lettuce, tomato, onion, pickles</li> -->
+                </ul>
+            </div>
+            <div class="recipe-directions">
+                <h2>Directions</h2>
+                <ol>
+                    <li>Reconstitute each Kanjinti Vial with 20mL of Bacteriostatic Water.</li>
+                    <li>Calculate the dose needed.</li>
+                    <li>Draw up the desired volume.</li>
+                    <li>Take photo.</li>
+                    <li>Once RPH approves, inject into base bag.</li>
+                    <!-- <li>Grill patties for about 6-8 minutes on each side, until cooked through.</li>
+                    <li>Toast brioche buns on the grill for a minute or two.</li>
+                    <li>Assemble burgers with desired toppings and enjoy!</li> -->
+                </ol>
+            </div>
+            <div class="recipe-calculator">
+                <h2>Calculator</h2>
+                <label for="calculator-input">Enter a value:</label>
+                <input type="number" id="calculator-input" min="1" step="any">
+                <button onclick="calculate()">Calculate</button>
+                <p id="calculator-result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="kanjinti_scripts.js"></script>
+</body>
+</html>
