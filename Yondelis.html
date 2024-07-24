@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link rel="stylesheet" href="kanjinti_styles.css">
+</head>
+<body>
+    <div class="recipe-container">
+        <div class="recipe-header">
+            <img src="Yondelis.png" alt="Recipe Image" class="recipe-image">
+            <h1>Trabectedin</h1>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <!-- <span class="reviews">5 from 21 reviews</span> -->
+            </div>
+            <div class="recipe-meta">
+                <span>🕒 Time: 30 minutes</span>
+                <span>💉 Yield: 20mL</span>
+            </div>
+        </div>
+        <div class="recipe-buttons">
+            <button onclick="printRecipe()">
+                <img src="print.svg" alt="Print"> Print Recipe
+            </button>
+            <button onclick="window.location.href='Haz.html'">
+                <img src="Paomedia-Small-N-Flat-House.512.png" alt="Pin"> Haz Home
+            </button>
+        </div>
+        <div class="recipe-content">
+            <div class="recipe-ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Yondelis</li>
+                    <li>SWFI</li>
+                    <li>0.9% NS</li>
+                    <li>Dosi-Fuser</li>
+                </ul>
+            </div>
+            <div class="recipe-directions">
+                <h2>Directions</h2>
+                <ol>
+                    <li>Reconstitute each 1mg Yondelis vial with 20mL of SWFI.</li>
+                    <li>Calculate the desired Yondelis dose.</li>
+                    <li>Calculate the Q.S. 0.9% NS Volume.</li>
+                    <li>Draw up the Yondelis dose.</li>
+                    <li>Program Diana for Q.S. 0.9% NS Volume.</li>
+                    <li>Take photo.</li>
+                    <li>Once RPH approves, inject into Elastomeric Pump.</li>
+                </ol>
+            </div>
+            <div class="recipe-calculator">
+                <h2>Calculator</h2>
+                <label for="calculator-input1">Yondelis Dose:</label>
+                <input type="number" id="calculator-input1" min="1" step="any">
+                <label for="calculator-input2">Total 0.9% NS Volume:</label>
+                <input type="number" id="calculator-input2" min="1" step="any">
+                <button onclick="calculate()">Calculate</button>
+                <p id="calculator-result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="Yondelis.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link rel="stylesheet" href="kanjinti_styles.css">
+</head>
+<body>
+    <div class="recipe-container">
+        <div class="recipe-header">
+            <img src="5FU.png" alt="Recipe Image" class="recipe-image">
+            <h1>5FU Fluorouracil</h1>
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <!-- <span class="star">&#9733;</span> -->
+                <!-- <span class="star">&#9733;</span> -->
+                <!-- <span class="reviews">5 from 21 reviews</span> -->
+            </div>
+            <div class="recipe-meta">
+                <span>🕒 Time: 10 minutes</span>
+                <span>💉 Yield: 100mL</span>
+            </div>
+        </div>
+        <div class="recipe-buttons">
+            <button onclick="printRecipe()">
+                <img src="print.svg" alt="Print"> Print Recipe
+            </button>
+            <button onclick="window.location.href='Haz.html'">
+                <img src="Paomedia-Small-N-Flat-House.512.png" alt="Pin"> Haz Home
+            </button>
+        </div>
+        <div class="recipe-content">
+            <div class="recipe-ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>5FU</li>
+                    <li>0.9% NS</li>
+                    <li>Elastomeric Pump 🍋</li>
+                </ul>
+            </div>
+            <div class="recipe-directions">
+                <h2>Directions</h2>
+                <ol>
+                    <li>Calculate Volume of 5FU and 0.9% NS.</li>
+                    <li>Program Diana.</li>
+                    <li>Take photo.</li>
+                    <li>Once RPH approves, inject into Elastomeric Pump.</li>
+                </ol>
+            </div>
+            <div class="recipe-calculator">
+                <h2>Calculator</h2>
+                <label for="calculator-input1">5FU Dose:</label>
+                <input type="number" id="calculator-input1" min="1" step="any">
+                <label for="calculator-input2">Total Volume:</label>
+                <input type="number" id="calculator-input2" min="1" step="any">
+                <button onclick="calculate()">Calculate</button>
+                <p id="calculator-result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="5fu.js"></script>
+</body>
+</html>

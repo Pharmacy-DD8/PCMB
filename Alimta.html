@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link rel="stylesheet" href="kanjinti_styles.css">
+</head>
+<body>
+    <div class="recipe-container">
+        <div class="recipe-header">
+            <img src="Alimta.png" alt="Recipe Image" class="recipe-image">
+            <h1>Alimta</h1>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <!-- <span class="star">★</span> -->
+            </div>
+            <div class="recipe-meta">
+                <span>🕒 Time: 10 minutes</span>
+                <span>💉 Yield: 20mL</span>
+            </div>
+        </div>
+        <div class="recipe-buttons">
+            <button onclick="printRecipe()">
+                <img src="print.svg" alt="Print"> Print Recipe
+            </button>
+            <button onclick="window.location.href='Haz.html'">
+                <img src="Paomedia-Small-N-Flat-House.512.png" alt="Pin"> Haz Home
+            </button>
+        </div>
+        <div class="recipe-content">
+            <div class="recipe-ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Alimta</li>
+                    <li>0.9% NS from base bag</li>
+                    <!-- <li>0.9% NS</li> -->
+                </ul>
+            </div>
+            <div class="recipe-directions">
+                <h2>Directions</h2>
+                <ol>
+                    <li>Reconstitute each 100mg Alimta Vial with 4.2mL of 0.9% NS.</li>
+                    <li>Reconstitute each 500mg Alimta Vial with 20mL of 0.9% NS.</li>
+                    <li>Draw up the desired dose.</li>
+                    <li>Take photo.</li>
+                    <li>Once RPH approves, inject dose.</li>
+                </ol>
+            </div>
+            <div class="recipe-calculator">
+                <h2>Calculator</h2>
+                <label for="calculator-input">Enter the dose in mg:</label>
+                <input type="number" id="calculator-input" min="1" step="any">
+                <button onclick="calculate()">Calculate</button>
+                <p id="calculator-result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="Alimta.js"></script>
+</body>
+</html>
