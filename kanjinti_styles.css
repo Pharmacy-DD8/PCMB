@@ -86,7 +86,8 @@ h1 {
 .recipe-description,
 .recipe-ingredients,
 .recipe-directions,
-.recipe-calculator {
+.recipe-calculator,
+.recipe-special-tools {
     margin: 20px 0;
 }
 
@@ -99,7 +100,8 @@ h1 {
 
 .recipe-ingredients,
 .recipe-directions,
-.recipe-calculator {
+.recipe-calculator,
+.recipe-special-tools {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -118,6 +120,11 @@ h1 {
 .recipe-calculator {
     flex: 1;
     padding-right: 40px; /* Add padding to the right */
+}
+
+.recipe-special-tools {
+    flex: 1;
+    padding-right: 40px;
 }
 
 .recipe-calculator label,
@@ -173,7 +180,8 @@ h1 {
 
     .recipe-ingredients,
     .recipe-directions,
-    .recipe-calculator {
+    .recipe-calculator,
+    .recipe-special-tools {
         background: none;
         border: none;
         box-shadow: none;

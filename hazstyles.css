@@ -54,7 +54,8 @@ section {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 5 columns */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
     gap: 20px;
 }
 
